@@ -3,7 +3,7 @@ pipeline {
     agent {label 'car'}
 
     stages {
-        stage("hello"){
+        stage("Hello"){
             steps{
                 script{
                     hello()
@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Depolyment started.'
+                echo 'Depolyment started .'
                 sh 'docker compose down && docker compose up -d'
                 echo 'App deployed.'
             }
